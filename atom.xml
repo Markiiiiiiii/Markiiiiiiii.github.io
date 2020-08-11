@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://markiiiiiiii.github.io/"/>
-  <updated>2020-08-08T03:11:58.806Z</updated>
+  <updated>2020-08-11T01:00:06.468Z</updated>
   <id>http://markiiiiiiii.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google虚拟机vps的本地化SSH登陆设置</title>
+    <link href="http://markiiiiiiii.github.io/2020/08/11/Google%E8%99%9A%E6%8B%9F%E6%9C%BAvps%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%8C%96SSH%E7%99%BB%E9%99%86%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://markiiiiiiii.github.io/2020/08/11/Google%E8%99%9A%E6%8B%9F%E6%9C%BAvps%E7%9A%84%E6%9C%AC%E5%9C%B0%E5%8C%96SSH%E7%99%BB%E9%99%86%E8%AE%BE%E7%BD%AE/</id>
+    <published>2020-08-11T00:50:51.000Z</published>
+    <updated>2020-08-11T01:00:06.468Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Google-cloud-VPS-本地使用SSH登陆"><a href="#Google-cloud-VPS-本地使用SSH登陆" class="headerlink" title="Google cloud VPS 本地使用SSH登陆"></a>Google cloud VPS 本地使用SSH登陆</h2><p>昨天发现google cloud上发现还有2K+的余额，正好最近在学习nginx的负载平衡，拿来做个vps来做nginx的服务器来实例化一下。vps做好后结果发现本地ssh登陆是要做一些小小的设置。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f googlekey   </span><br><span class="line">#创建一个googlekey公私钥</span><br><span class="line">cat googlekey.pub</span><br><span class="line">#输出公钥</span><br></pre></td></tr></table></figure><p>打开google cloud的元数据–ssh–修改–添加一项</p><p>将公钥输入保存</p><p>本地终端中输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -i googlekey username@ip</span><br><span class="line">#username这时是在元数据中显示的name</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;Google-cloud-VPS-本地使用SSH登陆&quot;&gt;&lt;a href=&quot;#Google-cloud-VPS-本地使用SSH登陆&quot; class=&quot;headerlink&quot; title=&quot;Google cloud VPS 本地使用SSH登陆&quot;&gt;&lt;/a&gt;Google c
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="http://markiiiiiiii.github.io/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+      <category term="Google" scheme="http://markiiiiiiii.github.io/tags/Google/"/>
+    
+      <category term="VPS" scheme="http://markiiiiiiii.github.io/tags/VPS/"/>
+    
+  </entry>
   
   <entry>
     <title>Pyspider+python-Wordpress-xmlrpc爬取自动发布</title>
