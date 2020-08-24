@@ -220,11 +220,11 @@ profile:
     #Behance: https://www.behance.net/cofess
   # My Personal Labels
   labels:
-    - 前端
-    - 前端开发
-    - 前端重构
+    - SHELL编程
+    - Ubuntu
+    - 爬虫
     - Web前端
-    - 网页重构
+    - Linux
   # My Personal Works
   works:
     name:
