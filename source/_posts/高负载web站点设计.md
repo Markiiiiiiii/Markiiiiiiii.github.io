@@ -30,3 +30,16 @@ categories:
 
 - Pyspider爬虫框架爬取需要的数据
 - 安装python-wordpress-xmlrpc库， 使用wordpress的rpc服务接受Pyspider爬取经过清洗后的数据发布到wordpress服务器。
+
+```mermaid
+graph TD
+A[用户] -->|访问| B((负载平衡服务器))
+B --> |用户搜索动作|C{动态服务器}
+B --> |静态页面|D{静态服务器组}
+D -->|权重平衡| E[nginx 1]
+D -->|权重平衡| F[ngnix 2]
+D -->|权重平衡| I[ngnix 3]
+D -.-|内网服务器组|G[WP内容生产发布服务器]
+G -.-|爬取自动发布|H(Pyspider服务器)
+G -->|MySQL主从同步|C
+```
