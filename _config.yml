@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://markiiiiiiii.github.io
+url: https://www.fh123.co/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -105,7 +105,9 @@ theme: dawn
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:Markiiiiiiii/Markiiiiiiii.github.io.git
+  repository: 
+    github: git@github.com:Markiiiiiiii/Markiiiiiiii.github.io.git
+    googlevps: git@35.201.213.247:blog.git
   branch: master
 
 # hexo-neat
