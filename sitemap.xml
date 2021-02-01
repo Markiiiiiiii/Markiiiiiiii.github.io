@@ -172,6 +172,13 @@
   </url>
   
   <url>
+    <loc>https://www.fh123.co/tags/Ubuntu/</loc>
+    <lastmod>2021-02-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.fh123.co/tags/hexo/</loc>
     <lastmod>2021-02-01</lastmod>
     <changefreq>daily</changefreq>
@@ -180,13 +187,6 @@
   
   <url>
     <loc>https://www.fh123.co/tags/MySQL/</loc>
-    <lastmod>2021-02-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.fh123.co/tags/Ubuntu/</loc>
     <lastmod>2021-02-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -237,6 +237,13 @@
   </url>
   
   <url>
+    <loc>https://www.fh123.co/categories/%E8%BF%90%E7%BB%B4/%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2021-02-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.fh123.co/categories/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2021-02-01</lastmod>
     <changefreq>daily</changefreq>
@@ -245,13 +252,6 @@
   
   <url>
     <loc>https://www.fh123.co/categories/blog/</loc>
-    <lastmod>2021-02-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.fh123.co/categories/%E8%BF%90%E7%BB%B4/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2021-02-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
