@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.fh123.co/"/>
-  <updated>2021-01-19T02:39:56.839Z</updated>
+  <updated>2021-02-01T02:07:46.079Z</updated>
   <id>https://www.fh123.co/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux中单机Kafka学习环境搭建</title>
+    <link href="https://www.fh123.co/2021/02/01/Linux%E4%B8%AD%E5%8D%95%E6%9C%BAKafka%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>https://www.fh123.co/2021/02/01/Linux%E4%B8%AD%E5%8D%95%E6%9C%BAKafka%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</id>
+    <published>2021-02-01T01:50:07.000Z</published>
+    <updated>2021-02-01T02:07:46.079Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="ArchLinux环境中搭建Kafka单机学习环境"><a href="#ArchLinux环境中搭建Kafka单机学习环境" class="headerlink" title="ArchLinux环境中搭建Kafka单机学习环境"></a>ArchLinux环境中搭建Kafka单机学习环境</h2><h3 id="1-下载Kafka源码"><a href="#1-下载Kafka源码" class="headerlink" title="1.下载Kafka源码"></a>1.下载Kafka源码</h3><p><a href="https://archive.apache.org/dist/kafka/2.7.0/kafka_2.12-2.7.0.tgz">https://archive.apache.org/dist/kafka/2.7.0/kafka_2.12-2.7.0.tgz</a></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &#x2F;&#x2F;解压</span><br><span class="line"> tar zxvf kafka_2.12-2.7.0.tgz &#x2F;opt&#x2F;kafka</span><br><span class="line">&#x2F;&#x2F;安装jdk环境</span><br><span class="line"> pacman -S jdk-openjdk</span><br></pre></td></tr></table></figure><h3 id="2-进入bin目录"><a href="#2-进入bin目录" class="headerlink" title="2.进入bin目录"></a>2.进入bin目录</h3><p>主要的操作都在bin目录下</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;opt&#x2F;kafka&#x2F;bin</span><br></pre></td></tr></table></figure><h3 id="3-启动-zookeeper"><a href="#3-启动-zookeeper" class="headerlink" title="3.启动 zookeeper"></a>3.启动 zookeeper</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;zookeeper-server-start.sh ..&#x2F;config&#x2F;zookeeper.properties </span><br></pre></td></tr></table></figure><h3 id="4-测试-zookeeper"><a href="#4-测试-zookeeper" class="headerlink" title="4.测试 zookeeper"></a>4.测试 zookeeper</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;zookeeper-shell.sh localhost:2181</span><br></pre></td></tr></table></figure><h3 id="5-启动kafka服务"><a href="#5-启动kafka服务" class="headerlink" title="5.启动kafka服务"></a>5.启动kafka服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;kafka-server-start.sh ..&#x2F;config&#x2F;server.properties </span><br></pre></td></tr></table></figure><h3 id="6-测试kafka服务"><a href="#6-测试kafka服务" class="headerlink" title="6.测试kafka服务"></a>6.测试kafka服务</h3><h4 id="6-1-创建一个topic"><a href="#6-1-创建一个topic" class="headerlink" title="6.1 创建一个topic"></a>6.1 创建一个topic</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test</span><br></pre></td></tr></table></figure><h4 id="6-2-生产者发送消息"><a href="#6-2-生产者发送消息" class="headerlink" title="6.2 生产者发送消息"></a>6.2 生产者发送消息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;kafka-console-producer.sh --broker-list localhost:9092 --topic test</span><br></pre></td></tr></table></figure><h4 id="6-3-消费者接受消息"><a href="#6-3-消费者接受消息" class="headerlink" title="6.3 消费者接受消息"></a>6.3 消费者接受消息</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic test --from-beginning</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;ArchLinux环境中搭建Kafka单机学习环境&quot;&gt;&lt;a href=&quot;#ArchLinux环境中搭建Kafka单机学习环境&quot; class=&quot;headerlink&quot; title=&quot;ArchLinux环境中搭建Kafka单机学习环境&quot;&gt;&lt;/a&gt;ArchLinux环境
+      
+    
+    </summary>
+    
+    
+      <category term="运维" scheme="https://www.fh123.co/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="编程" scheme="https://www.fh123.co/categories/%E8%BF%90%E7%BB%B4/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="Archlinux" scheme="https://www.fh123.co/tags/Archlinux/"/>
+    
+      <category term="Linux" scheme="https://www.fh123.co/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>vscode中golint出现的other declaration of main错误解决</title>
@@ -170,9 +200,9 @@
       <category term="运维" scheme="https://www.fh123.co/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
-      <category term="Ubuntu" scheme="https://www.fh123.co/tags/Ubuntu/"/>
-    
       <category term="Linux" scheme="https://www.fh123.co/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="https://www.fh123.co/tags/Ubuntu/"/>
     
   </entry>
   
@@ -225,9 +255,9 @@
       <category term="运维" scheme="https://www.fh123.co/categories/%E8%BF%90%E7%BB%B4/"/>
     
     
-      <category term="wordpress" scheme="https://www.fh123.co/tags/wordpress/"/>
-    
       <category term="nginx" scheme="https://www.fh123.co/tags/nginx/"/>
+    
+      <category term="wordpress" scheme="https://www.fh123.co/tags/wordpress/"/>
     
   </entry>
   
@@ -281,9 +311,9 @@
       <category term="编程" scheme="https://www.fh123.co/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="pyspider" scheme="https://www.fh123.co/tags/pyspider/"/>
-    
       <category term="wordpress" scheme="https://www.fh123.co/tags/wordpress/"/>
+    
+      <category term="pyspider" scheme="https://www.fh123.co/tags/pyspider/"/>
     
   </entry>
   
