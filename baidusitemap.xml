@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://www.fh123.co/2021/02/21/mysql%E6%8C%81%E4%B9%85%E5%8C%96%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2021-02-21</lastmod>
+  </url>
+  <url>
     <loc>https://www.fh123.co/2021/02/01/Linux%E4%B8%AD%E5%8D%95%E6%9C%BAKafka%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2021-02-01</lastmod>
+    <lastmod>2021-02-21</lastmod>
   </url>
   <url>
     <loc>https://www.fh123.co/2021/01/19/vscode%E4%B8%ADgolint%E5%87%BA%E7%8E%B0%E7%9A%84other-declaration-of-main%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/</loc>
